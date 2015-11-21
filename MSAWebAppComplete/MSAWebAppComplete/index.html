@@ -10,7 +10,8 @@
     <!--following two lines are javascripts-->
     <script src="Scripts/StudentModule.js"></script>
     <script src="Scripts/index.js"></script>
-
+    <!--login to facebook-->
+    <script src="Scripts/facebooklogin.js"></script>
     <!--stylesheet-->
     <link href="Content/style.css" rel="stylesheet" />
 
@@ -34,6 +35,10 @@
     </script>
 </head>
 <body>
+
+    <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+    </fb:login-button>
+
     <!--create striped table with style:"spaced-table"-->
     <table class="table table-striped spaced-table">
         <thead>
