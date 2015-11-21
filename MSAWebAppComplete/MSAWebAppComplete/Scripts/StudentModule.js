@@ -8,8 +8,8 @@
 
             $.ajax({
                 type: "GET",
-                dataType: "jsonp",
-                url: "http://api.uinames.com/?amount=25",
+                dataType: "json",
+                url: "http://xizhemsaday2.azurewebsites.net/api/Students",
                 success: function (data) {
                     callback(data);//so this is equivilent to setupStudentsTable(data)
                 }

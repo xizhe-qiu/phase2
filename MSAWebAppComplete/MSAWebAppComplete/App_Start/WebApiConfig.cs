@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace MSAWebAppComplete
 {
@@ -10,6 +11,9 @@ namespace MSAWebAppComplete
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
+            //cors enables access of my api from outside my web app
+            var cors = new EnableCorsAttribute("*", "*", "*");
+            config.EnableCors(cors);
 
             // Web API routes
             config.MapHttpAttributeRoutes();
